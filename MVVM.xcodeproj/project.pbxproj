@@ -17,6 +17,8 @@
 		45316D4A1CBA84F6002B7126 /* View+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D491CBA84F6002B7126 /* View+Binding.swift */; };
 		45316D4C1CBA8857002B7126 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D4B1CBA8857002B7126 /* Nimble.framework */; };
 		45316D4D1CBA89DF002B7126 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D451CBA84BC002B7126 /* Bond.framework */; };
+		45316D4F1CBA8ADE002B7126 /* TableCellSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D4E1CBA8ADE002B7126 /* TableCellSourceTests.swift */; };
+		45316D511CBA8D32002B7126 /* TestNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45316D501CBA8D32002B7126 /* TestNibTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		45316D471CBA84D6002B7126 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		45316D491CBA84F6002B7126 /* View+Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Binding.swift"; sourceTree = "<group>"; };
 		45316D4B1CBA8857002B7126 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		45316D4E1CBA8ADE002B7126 /* TableCellSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellSourceTests.swift; sourceTree = "<group>"; };
+		45316D501CBA8D32002B7126 /* TestNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestNibTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,9 @@
 			children = (
 				45316D4B1CBA8857002B7126 /* Nimble.framework */,
 				45316D321CBA811C002B7126 /* ViewBindingTests.swift */,
+				45316D4E1CBA8ADE002B7126 /* TableCellSourceTests.swift */,
 				45316D341CBA811C002B7126 /* Info.plist */,
+				45316D501CBA8D32002B7126 /* TestNibTableViewCell.xib */,
 			);
 			path = MVVMTests;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45316D511CBA8D32002B7126 /* TestNibTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45316D331CBA811C002B7126 /* ViewBindingTests.swift in Sources */,
+				45316D4F1CBA8ADE002B7126 /* TableCellSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,8 +40,8 @@ extension TableViewCellSource {
 
      - parameter _: The type of the cell being registered
      */
-    func register<T: UITableViewCell where T: ViewCell>(_: T.Type) {
-        let nib = UINib(nibName: (String(T)), bundle: nil)
+    func registerNib<T: UITableViewCell where T: ViewCell>(_: T.Type, bundle: NSBundle? = nil) {
+        let nib = UINib(nibName: (String(T)), bundle: bundle)
         tableView?.registerNib(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
 
