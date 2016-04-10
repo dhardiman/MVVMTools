@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		45316D271CBA811C002B7126 /* MVVM.h in Headers */ = {isa = PBXBuildFile; fileRef = 45316D261CBA811C002B7126 /* MVVM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45316D2E1CBA811C002B7126 /* MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D231CBA811C002B7126 /* MVVM.framework */; };
-		45316D331CBA811C002B7126 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D321CBA811C002B7126 /* MVVMTests.swift */; };
+		45316D331CBA811C002B7126 /* ViewBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D321CBA811C002B7126 /* ViewBindingTests.swift */; };
 		45316D431CBA845C002B7126 /* TableViewCellSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D411CBA845C002B7126 /* TableViewCellSource.swift */; };
 		45316D441CBA845C002B7126 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D421CBA845C002B7126 /* ViewModel.swift */; };
 		45316D461CBA84BC002B7126 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D451CBA84BC002B7126 /* Bond.framework */; };
 		45316D481CBA84D6002B7126 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D471CBA84D6002B7126 /* View.swift */; };
 		45316D4A1CBA84F6002B7126 /* View+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D491CBA84F6002B7126 /* View+Binding.swift */; };
+		45316D4C1CBA8857002B7126 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D4B1CBA8857002B7126 /* Nimble.framework */; };
+		45316D4D1CBA89DF002B7126 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D451CBA84BC002B7126 /* Bond.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,13 +34,14 @@
 		45316D261CBA811C002B7126 /* MVVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVM.h; sourceTree = "<group>"; };
 		45316D281CBA811C002B7126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45316D2D1CBA811C002B7126 /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45316D321CBA811C002B7126 /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
+		45316D321CBA811C002B7126 /* ViewBindingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBindingTests.swift; sourceTree = "<group>"; };
 		45316D341CBA811C002B7126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45316D411CBA845C002B7126 /* TableViewCellSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellSource.swift; sourceTree = "<group>"; };
 		45316D421CBA845C002B7126 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		45316D451CBA84BC002B7126 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = SOURCE_ROOT; };
 		45316D471CBA84D6002B7126 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		45316D491CBA84F6002B7126 /* View+Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Binding.swift"; sourceTree = "<group>"; };
+		45316D4B1CBA8857002B7126 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45316D4D1CBA89DF002B7126 /* Bond.framework in Frameworks */,
 				45316D2E1CBA811C002B7126 /* MVVM.framework in Frameworks */,
+				45316D4C1CBA8857002B7126 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +101,8 @@
 		45316D311CBA811C002B7126 /* MVVMTests */ = {
 			isa = PBXGroup;
 			children = (
-				45316D321CBA811C002B7126 /* MVVMTests.swift */,
+				45316D4B1CBA8857002B7126 /* Nimble.framework */,
+				45316D321CBA811C002B7126 /* ViewBindingTests.swift */,
 				45316D341CBA811C002B7126 /* Info.plist */,
 			);
 			path = MVVMTests;
@@ -221,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45316D331CBA811C002B7126 /* MVVMTests.swift in Sources */,
+				45316D331CBA811C002B7126 /* ViewBindingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +347,7 @@
 				);
 				INFOPLIST_FILE = MVVM/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -363,7 +369,7 @@
 				);
 				INFOPLIST_FILE = MVVM/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -373,8 +379,12 @@
 		45316D3B1CBA811C002B7126 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MVVMTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -383,8 +393,12 @@
 		45316D3C1CBA811C002B7126 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MVVMTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
