@@ -16,7 +16,7 @@ public protocol ViewCell: View {
 }
 
 // MARK: - Default implementation of reuse identifier for table view cells
-extension ViewCell where Self: UITableViewCell {
+public extension ViewCell where Self: UITableViewCell {
     static var defaultReuseIdentifier: String {
         return String(self)
     }
