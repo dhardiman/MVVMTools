@@ -9,7 +9,7 @@
 import Foundation
 import Bond
 
-extension View {
+public extension View {
     /**
      Binds an observable object to a label
 

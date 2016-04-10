@@ -12,7 +12,7 @@ import Foundation
 /// a view model. This is intended to be implemented by a `UIView` or
 /// `UIViewController`, hence the `class` constraint to avoid requirements for
 /// marking methods as `mutating`.
-protocol View: class {
+public protocol View: class {
     /// The generic type of the view model being consumed
     associatedtype ViewModelType: ViewModel
 

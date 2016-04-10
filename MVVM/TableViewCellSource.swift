@@ -11,7 +11,7 @@ import UIKit
 /**
  *  A `View` that can be reused
  */
-protocol ViewCell: View {
+public protocol ViewCell: View {
     static var defaultReuseIdentifier: String { get }
 }
 
@@ -25,7 +25,7 @@ extension ViewCell where Self: UITableViewCell {
 /**
  *  A protocol that describes a source for MVVM compatible table view cells
  */
-protocol TableViewCellSource: UITableViewDataSource {
+public protocol TableViewCellSource: UITableViewDataSource {
     /// The type of the view model being used by the cells. Used as a type 
     /// constraint in the extension below
     associatedtype CellViewModelType: ViewModel
@@ -34,7 +34,7 @@ protocol TableViewCellSource: UITableViewDataSource {
     var tableView: UITableView! { get set }
 }
 
-extension TableViewCellSource {
+public extension TableViewCellSource {
     /**
      Registers a table cell by nib name with the current table view
 

@@ -11,7 +11,7 @@ import UIKit
 /**
  *  Protocol indicating an entity can be used as a view model
  */
-protocol ViewModel {
+public protocol ViewModel {
     /// The generic type of the model being displayed
     associatedtype ModelType
 
