@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Bond
+import ReactiveKit
+import ReactiveUIKit
 
 public extension View {
     /**
@@ -16,8 +17,8 @@ public extension View {
      - parameter observable: The observable to bind
      - parameter label:      The label to bind to
      */
-    func bind(observable: Observable<String>, toLabel label: UILabel) {
-        observable.bindTo(label.bnd_text)
+    func bind(observable: Property<String>, toLabel label: UILabel) {
+        observable.bindTo(label.rText)
     }
 
     /**

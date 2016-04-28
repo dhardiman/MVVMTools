@@ -7,8 +7,8 @@
 //
 
 import XCTest
-import Bond
 import Nimble
+import ReactiveKit
 @testable import MVVM
 
 class TestNibTableViewCell: UITableViewCell, ViewCell {

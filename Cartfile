@@ -1,1 +1,2 @@
-github "SwiftBond/Bond"
+github "ReactiveKit/ReactiveKit" ~> 2.0
+github "ReactiveKit/ReactiveUIKit" ~> 2.0

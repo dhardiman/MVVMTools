@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Bond
+import ReactiveKit
 import Nimble
 @testable import MVVM
 
@@ -18,7 +18,7 @@ struct TestViewModel: ViewModel {
         }
     }
 
-    let observableString = Observable("")
+    let observableString = Property("")
 }
 
 class TestView: UIView, View {

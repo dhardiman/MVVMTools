@@ -12,13 +12,13 @@
 		45316D331CBA811C002B7126 /* ViewBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D321CBA811C002B7126 /* ViewBindingTests.swift */; };
 		45316D431CBA845C002B7126 /* TableViewCellSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D411CBA845C002B7126 /* TableViewCellSource.swift */; };
 		45316D441CBA845C002B7126 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D421CBA845C002B7126 /* ViewModel.swift */; };
-		45316D461CBA84BC002B7126 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D451CBA84BC002B7126 /* Bond.framework */; };
 		45316D481CBA84D6002B7126 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D471CBA84D6002B7126 /* View.swift */; };
 		45316D4A1CBA84F6002B7126 /* View+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D491CBA84F6002B7126 /* View+Binding.swift */; };
 		45316D4C1CBA8857002B7126 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D4B1CBA8857002B7126 /* Nimble.framework */; };
-		45316D4D1CBA89DF002B7126 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D451CBA84BC002B7126 /* Bond.framework */; };
 		45316D4F1CBA8ADE002B7126 /* TableCellSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D4E1CBA8ADE002B7126 /* TableCellSourceTests.swift */; };
 		45316D511CBA8D32002B7126 /* TestNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45316D501CBA8D32002B7126 /* TestNibTableViewCell.xib */; };
+		45FA9AAD1CD201D7005A23F8 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FA9AAB1CD201D7005A23F8 /* ReactiveKit.framework */; };
+		45FA9AAE1CD201D7005A23F8 /* ReactiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FA9AAC1CD201D7005A23F8 /* ReactiveUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +40,13 @@
 		45316D341CBA811C002B7126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45316D411CBA845C002B7126 /* TableViewCellSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellSource.swift; sourceTree = "<group>"; };
 		45316D421CBA845C002B7126 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		45316D451CBA84BC002B7126 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = SOURCE_ROOT; };
 		45316D471CBA84D6002B7126 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		45316D491CBA84F6002B7126 /* View+Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Binding.swift"; sourceTree = "<group>"; };
 		45316D4B1CBA8857002B7126 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		45316D4E1CBA8ADE002B7126 /* TableCellSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellSourceTests.swift; sourceTree = "<group>"; };
 		45316D501CBA8D32002B7126 /* TestNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestNibTableViewCell.xib; sourceTree = "<group>"; };
+		45FA9AAB1CD201D7005A23F8 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = SOURCE_ROOT; };
+		45FA9AAC1CD201D7005A23F8 /* ReactiveUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveUIKit.framework; path = Carthage/Build/iOS/ReactiveUIKit.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45316D461CBA84BC002B7126 /* Bond.framework in Frameworks */,
+				45FA9AAE1CD201D7005A23F8 /* ReactiveUIKit.framework in Frameworks */,
+				45FA9AAD1CD201D7005A23F8 /* ReactiveKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45316D4D1CBA89DF002B7126 /* Bond.framework in Frameworks */,
 				45316D2E1CBA811C002B7126 /* MVVM.framework in Frameworks */,
 				45316D4C1CBA8857002B7126 /* Nimble.framework in Frameworks */,
 			);
@@ -91,7 +92,8 @@
 		45316D251CBA811C002B7126 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				45316D451CBA84BC002B7126 /* Bond.framework */,
+				45FA9AAB1CD201D7005A23F8 /* ReactiveKit.framework */,
+				45FA9AAC1CD201D7005A23F8 /* ReactiveUIKit.framework */,
 				45316D261CBA811C002B7126 /* MVVM.h */,
 				45316D421CBA845C002B7126 /* ViewModel.swift */,
 				45316D471CBA84D6002B7126 /* View.swift */,
@@ -433,6 +435,7 @@
 				45316D391CBA811C002B7126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45316D3A1CBA811C002B7126 /* Build configuration list for PBXNativeTarget "MVVMTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +444,7 @@
 				45316D3C1CBA811C002B7126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
