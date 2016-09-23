@@ -40,11 +40,11 @@ class TestTableViewController: UITableViewController, TableViewCellSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerClass(TestCodeTableViewCell)
-        registerNib(TestNibTableViewCell.self, bundle: NSBundle(forClass: self.dynamicType))
+        registerClass(TestCodeTableViewCell.self)
+        registerNib(TestNibTableViewCell.self, bundle: Bundle(for: type(of: self)))
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
 }
@@ -54,7 +54,7 @@ class TableCellSourceTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        viewController = TestTableViewController(style: .Plain)
+        viewController = TestTableViewController(style: .plain)
         _ = viewController.view
     }
     
@@ -64,12 +64,12 @@ class TableCellSourceTests: XCTestCase {
     }
 
     func testItIsPossibleToDequeueAConfiguredCell() {
-        let cell = viewController.cell(forItem: viewController.items.first!, atIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as TestCodeTableViewCell
+        let cell = viewController.cell(forItem: viewController.items.first!, at: IndexPath(row: 0, section: 0)) as TestCodeTableViewCell
         expect(cell.textLabel!.text).to(equal("Test Item"))
     }
 
     func testItIsPossibleToDequeueACellLoadedFromANib() {
-        let cell = viewController.cell(forItem: viewController.items.first!, atIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as TestNibTableViewCell
+        let cell = viewController.cell(forItem: viewController.items.first!, at: IndexPath(row: 0, section: 0)) as TestNibTableViewCell
         expect(cell.textLabel!.text).to(equal("Test Item"))
     }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 import ReactiveKit
-import ReactiveUIKit
+import Bond
 
 public extension View {
     /**
@@ -17,8 +17,8 @@ public extension View {
      - parameter observable: The observable to bind
      - parameter label:      The label to bind to
      */
-    func bind(observable: Property<String>, toLabel label: UILabel) {
-        observable.bindTo(label.rText)
+    func bind(_ observable: Property<String>, toLabel label: UILabel) {
+        observable.bind(to: label.bnd_text)
     }
     
     /**
@@ -27,8 +27,8 @@ public extension View {
      - parameter observable: The observable to bind
      - parameter imageView:  The image view to bind to
      */
-    func bind(observable: Property<UIImage?>, toImageView imageView: UIImageView) {
-        observable.bindTo(imageView.rImage)
+    func bind(_ observable: Property<UIImage?>, toImageView imageView: UIImageView) {
+        observable.bind(to: imageView.bnd_image)
     }
 
     /**
@@ -36,7 +36,7 @@ public extension View {
 
      - parameter model: The model to update to
      */
-    func updateViewModel(model: ViewModelType.ModelType?) {
+    func updateViewModel(_ model: ViewModelType.ModelType?) {
         viewModel.model = model
     }
 }

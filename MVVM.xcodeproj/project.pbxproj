@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4520ACA81D9517810056E518 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4520ACA71D9517810056E518 /* Bond.framework */; };
 		45316D271CBA811C002B7126 /* MVVM.h in Headers */ = {isa = PBXBuildFile; fileRef = 45316D261CBA811C002B7126 /* MVVM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45316D2E1CBA811C002B7126 /* MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45316D231CBA811C002B7126 /* MVVM.framework */; };
 		45316D331CBA811C002B7126 /* ViewBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D321CBA811C002B7126 /* ViewBindingTests.swift */; };
@@ -18,7 +19,6 @@
 		45316D4F1CBA8ADE002B7126 /* TableCellSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45316D4E1CBA8ADE002B7126 /* TableCellSourceTests.swift */; };
 		45316D511CBA8D32002B7126 /* TestNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45316D501CBA8D32002B7126 /* TestNibTableViewCell.xib */; };
 		45FA9AAD1CD201D7005A23F8 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FA9AAB1CD201D7005A23F8 /* ReactiveKit.framework */; };
-		45FA9AAE1CD201D7005A23F8 /* ReactiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FA9AAC1CD201D7005A23F8 /* ReactiveUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4520ACA71D9517810056E518 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = SOURCE_ROOT; };
 		45316D231CBA811C002B7126 /* MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45316D261CBA811C002B7126 /* MVVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVM.h; sourceTree = "<group>"; };
 		45316D281CBA811C002B7126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		45316D4E1CBA8ADE002B7126 /* TableCellSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellSourceTests.swift; sourceTree = "<group>"; };
 		45316D501CBA8D32002B7126 /* TestNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestNibTableViewCell.xib; sourceTree = "<group>"; };
 		45FA9AAB1CD201D7005A23F8 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = SOURCE_ROOT; };
-		45FA9AAC1CD201D7005A23F8 /* ReactiveUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveUIKit.framework; path = Carthage/Build/iOS/ReactiveUIKit.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45FA9AAE1CD201D7005A23F8 /* ReactiveUIKit.framework in Frameworks */,
 				45FA9AAD1CD201D7005A23F8 /* ReactiveKit.framework in Frameworks */,
+				4520ACA81D9517810056E518 /* Bond.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				45FA9AAB1CD201D7005A23F8 /* ReactiveKit.framework */,
-				45FA9AAC1CD201D7005A23F8 /* ReactiveUIKit.framework */,
+				4520ACA71D9517810056E518 /* Bond.framework */,
 				45316D261CBA811C002B7126 /* MVVM.h */,
 				45316D421CBA845C002B7126 /* ViewModel.swift */,
 				45316D471CBA84D6002B7126 /* View.swift */,
@@ -173,14 +173,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "David Hardiman";
 				TargetAttributes = {
 					45316D221CBA811C002B7126 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					45316D2C1CBA811C002B7126 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -266,8 +268,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -315,8 +319,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -336,6 +342,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -347,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -364,6 +372,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -371,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -401,6 +412,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -415,6 +427,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

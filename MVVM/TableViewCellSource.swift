@@ -18,7 +18,7 @@ public protocol ViewCell: View {
 // MARK: - Default implementation of reuse identifier for table view cells
 public extension ViewCell where Self: UITableViewCell {
     static var defaultReuseIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 
@@ -40,9 +40,9 @@ public extension TableViewCellSource {
 
      - parameter _: The type of the cell being registered
      */
-    func registerNib<T: UITableViewCell where T: ViewCell>(_: T.Type, bundle: NSBundle? = nil) {
-        let nib = UINib(nibName: (String(T)), bundle: bundle)
-        tableView?.registerNib(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
+    func registerNib<T: UITableViewCell>(_: T.Type, bundle: Bundle? = nil) where T: ViewCell {
+        let nib = UINib(nibName: (String(describing: T.self)), bundle: bundle)
+        tableView?.register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
 
     /**
@@ -50,8 +50,8 @@ public extension TableViewCellSource {
 
      - parameter _: The type of the cell being registered
      */
-    func registerClass<T: UITableViewCell where T: ViewCell>(_: T.Type) {
-        tableView?.registerClass(T.self, forCellReuseIdentifier: T.defaultReuseIdentifier)
+    func registerClass<T: UITableViewCell>(_: T.Type) where T: ViewCell {
+        tableView?.register(T.self, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
 
     /**
@@ -63,8 +63,9 @@ public extension TableViewCellSource {
 
      - returns: A configured cell
      */
-    func cell<VC: ViewCell where VC.ViewModelType == Self.CellViewModelType, VC: UITableViewCell>(forItem item: CellViewModelType.ModelType, atIndexPath: NSIndexPath) -> VC {
-        guard let cell = tableView?.dequeueReusableCellWithIdentifier(VC.defaultReuseIdentifier, forIndexPath: atIndexPath) as? VC else {
+    func cell<VC: ViewCell>(forItem item: CellViewModelType.ModelType, at indexPath: IndexPath) -> VC
+        where VC.ViewModelType == Self.CellViewModelType, VC: UITableViewCell {
+        guard let cell = tableView?.dequeueReusableCell(withIdentifier: VC.defaultReuseIdentifier, for: indexPath) as? VC else {
             fatalError("No cell registered for \(VC.defaultReuseIdentifier)")
         }
         cell.viewModel.model = item
