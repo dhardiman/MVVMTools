@@ -11,7 +11,7 @@ import ReactiveKit
 import Nimble
 @testable import MVVM
 
-struct TestViewModel: ViewModel {
+class TestViewModel: ViewModel {
     internal var model: String? {
         didSet {
             observableString.value = model ?? ""
