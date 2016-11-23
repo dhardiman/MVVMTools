@@ -22,7 +22,7 @@ class TestViewModel: ViewModel {
 }
 
 class TestView: UIView, View {
-    var viewModel: TestViewModel! = TestViewModel()
+    let viewModel: TestViewModel = TestViewModel()
 }
 
 class ViewBindingTests: XCTestCase {

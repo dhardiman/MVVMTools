@@ -16,12 +16,11 @@ public protocol View: class {
     /// The generic type of the view model being consumed
     associatedtype ViewModelType: ViewModel
 
-    /* The view model being consumed. The view is most likely responsible for 
-     * instantiating this at some point during its lifecycle.
-     * For example, a `UIViewController` would likely instantiate its view 
-     * model during `viewDidLoad()`, and then fetch the model from a network 
-     * request, or populate the model for the view model with a value passed in 
-     * via a segue.
+    /* The view model being consumed. The view is responsible for
+     * instantiating this during initialisation.
+     * It then needs to fetch the model during its lifecycle, perhaps from a 
+     * network request, or populate the model for the view model with a value 
+     * passed in via a segue.
      */
-    var viewModel: ViewModelType! { get set }
+    var viewModel: ViewModelType { get }
 }

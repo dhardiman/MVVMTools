@@ -12,7 +12,7 @@ import ReactiveKit
 @testable import MVVM
 
 class TestNibTableViewCell: UITableViewCell, ViewCell {
-    var viewModel: TestViewModel! = TestViewModel()
+    let viewModel: TestViewModel = TestViewModel()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +21,7 @@ class TestNibTableViewCell: UITableViewCell, ViewCell {
 }
 
 class TestCodeTableViewCell: UITableViewCell, ViewCell {
-    var viewModel: TestViewModel! = TestViewModel()
+    let viewModel: TestViewModel = TestViewModel()
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
