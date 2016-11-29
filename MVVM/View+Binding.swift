@@ -30,6 +30,16 @@ public extension View {
     func bind(_ observable: Property<UIImage?>, toImageView imageView: UIImageView) {
         observable.bind(to: imageView.bnd_image)
     }
+    
+    /**
+     Binds an observable object to an image view
+     
+     - parameter observable: The observable to bind
+     - parameter imageView:  The image view to bind to
+     */
+    func bind(_ observable: Property<UIImage>, toImageView imageView: UIImageView) {
+        observable.bind(to: imageView.bnd_image)
+    }
 
     /**
      Updates the view model with the latest model object
