@@ -18,7 +18,7 @@ public extension View {
      - parameter label:      The label to bind to
      */
     func bind(_ observable: Property<String>, toLabel label: UILabel) {
-        observable.bind(to: label.bnd_text)
+        observable.bind(to: label.reactive.text)
     }
     
     /**
@@ -28,7 +28,7 @@ public extension View {
      - parameter imageView:  The image view to bind to
      */
     func bind(_ observable: Property<UIImage?>, toImageView imageView: UIImageView) {
-        observable.bind(to: imageView.bnd_image)
+        observable.bind(to: imageView.reactive.image)
     }
     
     /**
@@ -38,7 +38,7 @@ public extension View {
      - parameter imageView:  The image view to bind to
      */
     func bind(_ observable: Property<UIImage>, toImageView imageView: UIImageView) {
-        observable.bind(to: imageView.bnd_image)
+        observable.bind(to: imageView.reactive.image)
     }
 
     /**
