@@ -20,6 +20,16 @@ public extension View {
     func bind(_ observable: Property<String>, toLabel label: UILabel) {
         observable.bind(to: label.reactive.text)
     }
+
+    /**
+     Binds an observable object to a label
+
+     - parameter observable: The observable to bind
+     - parameter label:      The label to bind to
+     */
+    func bind(_ observable: Property<String?>, toLabel label: UILabel) {
+        observable.bind(to: label.reactive.text)
+    }
     
     /**
      Binds an observable object to an image view
