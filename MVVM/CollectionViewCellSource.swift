@@ -24,7 +24,7 @@ public protocol CollectionViewCellSource: UICollectionViewDataSource {
     associatedtype CellViewModelType: ViewModel
     
     /// The collection view being supplied
-    var collectionView: UICollectionView? { get set }
+    var collectionView: UICollectionView! { get set }
 }
 
 public extension CollectionViewCellSource {

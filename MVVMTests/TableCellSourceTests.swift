@@ -23,7 +23,7 @@ class TestNibTableViewCell: UITableViewCell, ViewCell {
 class TestCodeTableViewCell: UITableViewCell, ViewCell {
     let viewModel: TestViewModel = TestViewModel()
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         bind(viewModel.observableString, toLabel: textLabel!)
     }
