@@ -108,7 +108,8 @@
 				4810B5731E1E57A8005639B0 /* CollectionViewCellSource.swift */,
 				45316D281CBA811C002B7126 /* Info.plist */,
 			);
-			path = MVVM;
+			name = MVVM;
+			path = Sources/MVVM;
 			sourceTree = "<group>";
 		};
 		45316D311CBA811C002B7126 /* MVVMTests */ = {
@@ -122,7 +123,8 @@
 				45316D501CBA8D32002B7126 /* TestNibTableViewCell.xib */,
 				4810B5771E1E59D7005639B0 /* TestNibCollectionViewCell.xib */,
 			);
-			path = MVVMTests;
+			name = MVVMTests;
+			path = Tests/MVVMTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,11 +189,11 @@
 				TargetAttributes = {
 					45316D221CBA811C002B7126 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 					};
 					45316D2C1CBA811C002B7126 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -200,6 +202,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -395,7 +398,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MVVM/Info.plist;
+				INFOPLIST_FILE = Sources/MVVM/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -403,7 +406,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -421,14 +424,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MVVM/Info.plist;
+				INFOPLIST_FILE = Sources/MVVM/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -439,11 +442,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MVVMTests/Info.plist;
+				INFOPLIST_FILE = Tests/MVVMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -454,11 +457,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MVVMTests/Info.plist;
+				INFOPLIST_FILE = Tests/MVVMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.MVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
