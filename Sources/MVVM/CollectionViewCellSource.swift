@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Default implementation of reuse identifier for collection view cells
 public extension ViewCell where Self: UICollectionViewCell {

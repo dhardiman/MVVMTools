@@ -9,6 +9,7 @@
 import Foundation
 import ReactiveKit
 import Bond
+import UIKit
 
 public extension View {
     /**
